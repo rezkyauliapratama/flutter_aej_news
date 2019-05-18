@@ -58,6 +58,7 @@ class NewsTileItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return FutureBuilder<ItemModel>(
       future: ApiProvider().fetchItem(id),
       builder: (BuildContext context, AsyncSnapshot<ItemModel> snapshot) {
@@ -121,5 +122,4 @@ class LoadingContainerShimmer extends StatelessWidget {
       child: LoadingContainer(),
     );
   }
-
 }
